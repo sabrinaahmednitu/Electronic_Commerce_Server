@@ -32,6 +32,14 @@ async function run() {
       const products = await cursor.toArray();
       res.send(products);
     });
+    
+    //fetch all data here
+    app.get('/electronicProduct', async (req, res) => {
+      const query = {};
+      const cursor = electronicProductCollection.find(query);
+      const products = await cursor.toArray();
+      res.send(products);
+    });
   
   
   
